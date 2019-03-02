@@ -1,0 +1,49 @@
+<p>
+  c24panel works!
+</p>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="text-center">Welcome to Category list</h2>
+  </div>
+  <div class="panel-body">
+      <table class="table table-bordered table-hover">
+        <tr class="bg-danger">
+
+          <th>prodid</th>
+          <th>catid</th>
+          <th>name</th>
+          <th>desc</th>
+          <th>img</th>
+          <th>price</th>
+          <th>qty</th>
+          <th>rating</th>
+          <th>rating2</th>
+        </tr>
+        <ng-container *ngFor="let p of products">
+          <tr>
+              <td>{{p.pid}}</td>
+              <td>{{p.catid}}</td>
+              <td>
+                <a [routerLink]="['/dashboard',{
+                  outlets:{
+                    rinfo:['info',p.catid]
+                  }
+                }]">
+                {{p.name}}
+              </a>
+              </td>
+              <td>{{p.desc}}</td>
+              <td>{{p.img}}</td>
+              <td>{{p.price}}</td>
+              <td>{{p.qty}}</td>
+              <td>{{p.rating}}</td>
+              <td>{{p.rating}}</td>
+          </tr>
+        </ng-container>
+      </table>
+  </div>
+  <div class="panel-footer">
+
+  </div>
+</div>

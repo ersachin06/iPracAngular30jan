@@ -1,0 +1,22 @@
+header img
+{
+  width: 100%;
+  height: 300px;
+}
+
+.main-content
+{
+  min-height:450px;
+}
+.footer
+{
+  background-color:black;
+  color: white;
+  padding: 10px;
+}
+.active
+{
+	background: orange !important;
+color: whlte;
+}
+

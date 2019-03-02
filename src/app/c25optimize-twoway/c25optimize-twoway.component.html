@@ -1,0 +1,21 @@
+<p>
+  c25optimize-twoway works!
+</p>
+
+<input type="text" name="txtName" [(ngModel)]="unm" [ngModelOptions]="{updateOn:'blur'}"/><br>
+{{unm}}
+
+<input type="text" name="txtLnm" [(ngModel)]="lnm" [ngModelOptions]="{updateOn:'change'}"/><br>
+{{lnm}}
+
+<input type="text" name="txtSnm" #searchVal (change)="0"/><br>
+you entered is  : {{searchVal.value}}<br>
+<br>------------------------------------------------------------------------------------<br>
+<input type="text" name="txtMnm" #searchVa2 (keypress)="0"/><br>
+you entered is  : {{searchVa2.value}}<br> <!-- it show one character less -->
+<br>------------------------------------------------------------------------------------<br>
+<input type="text" name="txtBnm" #searchVa3 (keyup)="0"/><br>
+you entered is  : {{searchVa3.value}}<br> <!-- proper working -->
+<br>------------------------------------------------------------------------------------<br>
+<button (click)="fun(searchVa3.value)">click me</button>
+from ts file data is : {{str}}<br>

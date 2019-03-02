@@ -1,0 +1,17 @@
+<p>
+  c18admin works!
+</p>
+
+<h1 class="text-center">Welcome to admin dashboard</h1>
+
+<div class="page-header">
+  <ul class="nav nav-tabs">
+      <li><a class="nav-link" [routerLink]="['airlines']">airlines</a></li>
+      <li><a class="nav-link" [routerLink]="['flights']">fights</a></li>
+      <li><a class="nav-link" [routerLink]="['viewuser']">view user</a></li>
+      <li><a class="nav-link" [routerLink]="['/categories']">categories</a></li>
+  </ul>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

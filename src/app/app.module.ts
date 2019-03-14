@@ -22,6 +22,9 @@ import { C25optimizeTwowayComponent } from './c25optimize-twoway/c25optimize-two
 import { C25portalComponent } from './c25portal/c25portal.component';
 import { AdminComponent } from './c25portal/admin/admin.component';
 import { UserComponent } from './c25portal/user/user.component';
+import { C27tdfformComponent } from './c26form/c27tdfform/c27tdfform.component';
+import { C27tdfformvalidationComponent } from './c27tdfformvalidation/c27tdfformvalidation.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,10 @@ import { UserComponent } from './c25portal/user/user.component';
     C25optimizeTwowayComponent,
     C25portalComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    C27tdfformComponent,
+    C27tdfformvalidationComponent,
+
   ],
   imports: [
     FormsModule,
@@ -67,7 +73,9 @@ import { UserComponent } from './c25portal/user/user.component';
          ]
 
         },
-        { path:'portal' ,component:C25portalComponent   }
+        { path:'portal' ,component:C25portalComponent   },
+        {path:'tdfForm',component:C27tdfformComponent},
+        {path:'tdfFormvalidation',component:C27tdfformvalidationComponent}
 
 
 

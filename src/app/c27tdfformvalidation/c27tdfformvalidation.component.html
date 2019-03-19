@@ -1,6 +1,6 @@
 <p>
   c27tdfformvalidation works!
-   p----= 47
+
 </p>
 
 <h1 class="text-center">Template Driven Form</h1>
@@ -26,23 +26,37 @@
   </div>
   <div class="form-group">
     <label>Enter City</label>
-    <input type="text" class="form-control" ngModel name="txtCity"/>
+     <input type="text" class="form-control" #nameRef4="ngModel" required  ngModel name="txtCity"/>
+
+     <div *ngIf="nameRef4.invalid">
+          please enter city
+     </div>
   </div>
 
   <!-- NESTED JSON OBJECT -->
 <div ngModelGroup="address">
   <div class="form-group">
     <label>Enter State</label>
-    <input type="text" class="form-control" ngModel name="txtState"/>
+    <input type="text" class="form-control" #nameRef5="ngModel" ngModel required name="txtState"/>
+    <!-- <strong>{{nameRef5.className}}</strong> -->
+    <div  [hidden]="nameRef5.valid " class="alert alert-danger">
+      Please enter state
+    </div>
+
   </div>
   <div class="form-group">
     <label>Enter Country</label>
-    <input type="text" class="form-control" ngModel name="txtCountry"/>
+    <input type="text" class="form-control" minlength="3" #nameRef6="ngModel" required ngModel name="txtCountry"/>
+    <div  [hidden]="nameRef6.valid " class="alert alert-danger">
+      Please enter country min 3 length
+    </div>
   </div>
+
 </div>
 
   <div class="form-group">
-    <input type="submit" value="Register" class="btn btn-primary"/>
+
+    <input type="submit" value="Register" class="btn btn-primary"  [disabled]="userForm.form.invalid"/>
     <button class="btn btn-success float-right">portal</button>
   </div>
 

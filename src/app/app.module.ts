@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,9 @@ import { AdminComponent } from './c25portal/admin/admin.component';
 import { UserComponent } from './c25portal/user/user.component';
 import { C27tdfformComponent } from './c26form/c27tdfform/c27tdfform.component';
 import { C27tdfformvalidationComponent } from './c27tdfformvalidation/c27tdfformvalidation.component';
+import { C28reactiveformComponent } from './c26form/c28reactiveform/c28reactiveform.component';
+
+
 
 @NgModule({
   declarations: [
@@ -46,10 +49,12 @@ import { C27tdfformvalidationComponent } from './c27tdfformvalidation/c27tdfform
     UserComponent,
     C27tdfformComponent,
     C27tdfformvalidationComponent,
+    C28reactiveformComponent,
 
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(
@@ -75,7 +80,8 @@ import { C27tdfformvalidationComponent } from './c27tdfformvalidation/c27tdfform
         },
         { path:'portal' ,component:C25portalComponent   },
         {path:'tdfForm',component:C27tdfformComponent},
-        {path:'tdfFormvalidation',component:C27tdfformvalidationComponent}
+        {path:'tdfFormvalidation',component:C27tdfformvalidationComponent},
+        { path:'reactiveForms',component:C28reactiveformComponent}
 
 
 

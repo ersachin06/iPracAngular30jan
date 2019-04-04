@@ -25,6 +25,7 @@ import { UserComponent } from './c25portal/user/user.component';
 import { C27tdfformComponent } from './c26form/c27tdfform/c27tdfform.component';
 import { C27tdfformvalidationComponent } from './c27tdfformvalidation/c27tdfformvalidation.component';
 import { C28reactiveformComponent } from './c26form/c28reactiveform/c28reactiveform.component';
+import { C29rdfRunTimeValidationComponent } from './c26form/c29rdf-run-time-validation/c29rdf-run-time-validation.component';
 
 
 
@@ -50,6 +51,7 @@ import { C28reactiveformComponent } from './c26form/c28reactiveform/c28reactivef
     C27tdfformComponent,
     C27tdfformvalidationComponent,
     C28reactiveformComponent,
+    C29rdfRunTimeValidationComponent,
 
   ],
   imports: [
@@ -81,7 +83,8 @@ import { C28reactiveformComponent } from './c26form/c28reactiveform/c28reactivef
         { path:'portal' ,component:C25portalComponent   },
         {path:'tdfForm',component:C27tdfformComponent},
         {path:'tdfFormvalidation',component:C27tdfformvalidationComponent},
-        { path:'reactiveForms',component:C28reactiveformComponent}
+        { path:'reactiveForms',component:C28reactiveformComponent},
+        { path:'reactiveFormsRunTimeV',component:C29rdfRunTimeValidationComponent}
 
 
 

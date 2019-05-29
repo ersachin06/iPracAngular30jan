@@ -3,11 +3,22 @@
 </p>
 
 <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+
 	<div class="form-group">
 		<label>NAME</label>
     <input type="text" class="form-control" formControlName="name" />
-    <div *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched" class="alert alert-info">
-      Please enter name
+    <!-- <div *ngIf="!rForm.contorls['name'].hasError('required')">this  is required</div>
+
+    <div *ngIf="rForm.controls['name'].hasError('minLength')">minimium 3 characer required </div>-->
+    <!-- <div *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched" class="alert "> -->
+        <div *ngIf="!rForm.controls['name'].valid " class="alert ">
+      <div *ngIf="rForm.controls['name'].hasError('required')" class="alert alert-info">
+        Please enter name
+      </div>
+      dddddddddddd
+      <div *ngIf="rForm.controls['name'].hasError('minLength') " class="alert alert-danger">
+          Please enter min 3 characters
+      </div>
     </div>
   </div>
   <div class="form-group">
@@ -19,5 +30,9 @@
   </div>
   <div class="form-group">
       <input type="submit" value="Add" class="btn btn-primary" [disabled]="!rForm.valid" />
+  </div>
+
+  <div class="form-group">
+      <input type="checkbox" class="form-control" formControlName="validity" value="1">
   </div>
 </form>

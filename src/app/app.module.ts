@@ -27,8 +27,15 @@ import { C27tdfformvalidationComponent } from './c27tdfformvalidation/c27tdfform
 import { C28reactiveformComponent } from './c26form/c28reactiveform/c28reactiveform.component';
 import { C29rdfRunTimeValidationComponent } from './c26form/c29rdf-run-time-validation/c29rdf-run-time-validation.component';
 
+import { HttpModule } from '@angular/http';
 
+import { HttpClientModule } from '@angular/common/http'; 
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatIconModule} from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
+import { C30EmpInsertDelUpdateSelectComponent } from './c30-emp-insert-del-update-select/c30-emp-insert-del-update-select.component';
+import { C31empDispComponent } from './c31emp-disp/c31emp-disp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,13 +59,26 @@ import { C29rdfRunTimeValidationComponent } from './c26form/c29rdf-run-time-vali
     C27tdfformvalidationComponent,
     C28reactiveformComponent,
     C29rdfRunTimeValidationComponent,
-
+    C30EmpInsertDelUpdateSelectComponent,
+    C31empDispComponent,
+    
+   
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+     MatCheckboxModule,
+     MatIconModule,
+
+     MatFormFieldModule,
+     MatInputModule,
+     MatSelectModule,
+     HttpClientModule,
+     HttpModule,
     RouterModule.forRoot(
       [
          {path:'home',component:HomeComponent},
@@ -84,7 +104,11 @@ import { C29rdfRunTimeValidationComponent } from './c26form/c29rdf-run-time-vali
         {path:'tdfForm',component:C27tdfformComponent},
         {path:'tdfFormvalidation',component:C27tdfformvalidationComponent},
         { path:'reactiveForms',component:C28reactiveformComponent},
-        { path:'reactiveFormsRunTimeV',component:C29rdfRunTimeValidationComponent}
+        { path:'reactiveFormsRunTimeV',component:C29rdfRunTimeValidationComponent},
+        {
+          path:'empInsertDelUpdtSelect',component:C30EmpInsertDelUpdateSelectComponent
+        },
+        {path:'empSelect',component:C31empDispComponent}
 
 
 

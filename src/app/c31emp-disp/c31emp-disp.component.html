@@ -1,0 +1,26 @@
+<p>
+  c31emp-disp works!
+</p>
+
+<table class="table table-border">
+  <tr>
+    <th>Empno</th>
+    <th>Ename</th>
+    <th>Eage</th>
+    <th>Eadd</th>
+    <th>Esal</th>
+    <th>Select</th>
+  </tr>
+
+  <tr *ngFor="let e of empList">
+      <td>{{e.empno}}</td>
+      <td>{{e.ename}}</td>
+      <td>{{e.eage}}</td>
+      <td>{{e.eadd}}</td>      
+      <td>{{e.esal}}</td>
+      
+      <td><a [routerLink]="['/empInsertDelUpdtSelect']" [queryParams]="{id:e.empno}" skipLocationChange="true">{{e.ename}}</a></td>
+      
+  </tr>
+</table>
+<pre>{{empList| json}}</pre>

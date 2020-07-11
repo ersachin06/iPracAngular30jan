@@ -1,7 +1,6 @@
 <p>
   c27tdfformvalidation works!
-
-</p>
+</p> 
 
 <h1 class="text-center">Template Driven Form</h1>
 
@@ -12,14 +11,14 @@
       <strong>{{nameRef.className}}</strong>
   </div>
 
-  <div class="form-group">
+ <div class="form-group">
     <label>Enter Username</label>
     <input type="text" class="form-control"  #nameRef2 required  ngModel name="txtUnm"/>
     <strong>{{nameRef2.className}}</strong>
-  </div>
+    <strong>{{nameRef2.value}}</strong>
+ </div>
 
-
-  <div class="form-group">
+ <div class="form-group">
     <label>Enter Email</label>
     <input type="email" class="form-control" #nameRef3 required ngModel name="txtEmail"/>
     <strong>{{nameRef3.className}}</strong>

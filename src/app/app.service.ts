@@ -11,8 +11,10 @@ import { Observable } from 'rxjs';
 export class AppService {
 
   // BaseUrl='http://localhost:8902/aclassdeal/api';
-BaseUrl='http://localhost:8901';
-   errorHandler(error){
+BaseUrl='http://localhost:8909';
+       //http://localhost:8901
+   
+errorHandler(error){
   return Observable.throw(error) ;
   }
 
@@ -35,7 +37,7 @@ BaseUrl='http://localhost:8901';
         if (response) 
         {
           console.log("response is "+ response);
-          return response;
+          return response; 
         }
       }
       catch (ex) {
@@ -49,10 +51,19 @@ BaseUrl='http://localhost:8901';
   saveEmp(formData) {
     console.log('saveEmp'+formData);
     let url=this.BaseUrl+'/saveEmpTbl';
-       return this.httpClient.post(url,formData).pipe(map(this.successResponse), catchError(this.errorHandler));
- 
+       return this.httpClient.post(url,formData).pipe(map(this.successResponse), catchError(this.errorHandler)); 
   }
-  getAllEmps()
+  // 
+  // RxJS catchError operator catches the error thrown by Observable and 
+  //handles it by returning a new Observable or throwing user defined error.
+  // catchError is the changed name of catch starting from RxJS 5.5.
+  // Angular 6 integrates RxJS 6 and hence Angular 6 onwards we need to use 
+  //RxJS catchError operator to handle error. catchError is the pipeable
+  // operator and it is used within pipe function of Observable. 
+  //The parameter of catchError is a function that takes error as 
+  //argument and returns Observable instance. catchError is imported as 
+  //following.
+  getAllEmps()   
   {
     //let url = this.BaseUrl+'/getAllEmps?limit='+limit+'&offset='+offset;
     let url = this.BaseUrl+'/getAllEmps';
@@ -65,6 +76,14 @@ BaseUrl='http://localhost:8901';
   }
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   uploadImage(formData) 
   {

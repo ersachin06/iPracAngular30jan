@@ -11,7 +11,7 @@ export class C31empDispComponent implements OnInit {
 
     constructor(private activateRoute:ActivatedRoute,private appService : AppService,private router:Router)
    {
-   
+    
   }
 
   // constructor(private activateRoute:ActivatedRoute,private router:Router,private location:Location)

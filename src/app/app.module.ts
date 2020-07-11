@@ -36,6 +36,15 @@ import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, 
 import { MatSelectModule } from '@angular/material/select';
 import { C30EmpInsertDelUpdateSelectComponent } from './c30-emp-insert-del-update-select/c30-emp-insert-del-update-select.component';
 import { C31empDispComponent } from './c31emp-disp/c31emp-disp.component';
+import { C32ReformAn1Component } from './c32-reform-an1/c32-reform-an1.component';
+import { C33FormValidationComponent } from './c33-form-validation/c33-form-validation.component';
+import { C34AReactiveFormsModuleComponent } from './c34-a-reactive-forms-module/c34-a-reactive-forms-module.component';
+import { C35ReactiveformsFillingFormComponent } from './c35-reactiveforms-filling-form/c35-reactiveforms-filling-form.component';
+import { C36ReactiveformsValidationsComponent } from './c36-reactiveforms-validations/c36-reactiveforms-validations.component';
+import { C37ReactiveFormsqtyinstockComponent } from './c37-reactive-formsqtyinstock/c37-reactive-formsqtyinstock.component';
+import { C38spinnerComponent } from './c38spinner/c38spinner.component';
+import { C38UsingObjservableComponent } from './c38-using-objservable/c38-using-objservable.component';
+import { DemoTusharObservableComponent } from './demo-tushar-observable/demo-tushar-observable.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +70,15 @@ import { C31empDispComponent } from './c31emp-disp/c31emp-disp.component';
     C29rdfRunTimeValidationComponent,
     C30EmpInsertDelUpdateSelectComponent,
     C31empDispComponent,
+    C32ReformAn1Component,
+    C33FormValidationComponent,
+    C34AReactiveFormsModuleComponent,
+    C35ReactiveformsFillingFormComponent,
+    C36ReactiveformsValidationsComponent,
+    C37ReactiveFormsqtyinstockComponent,
+    C38spinnerComponent,
+    C38UsingObjservableComponent,
+    DemoTusharObservableComponent,
     
    
   ],
@@ -76,12 +94,12 @@ import { C31empDispComponent } from './c31emp-disp/c31emp-disp.component';
 
      MatFormFieldModule,
      MatInputModule,
-     MatSelectModule,
+     MatSelectModule, 
      HttpClientModule,
      HttpModule,
     RouterModule.forRoot(
       [
-         {path:'home',component:HomeComponent},
+         {path:'home',component:HomeComponent}, 
          {path:'users',component:UsersComponent},
          {path:'products',component:ProductComponent},
          {path:'categories',component:C16catComponent},

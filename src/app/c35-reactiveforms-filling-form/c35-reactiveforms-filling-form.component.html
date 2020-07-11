@@ -1,0 +1,51 @@
+<p>
+  c35-reactiveforms-filling-form works!
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/c2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Reactive Forms</h5>
+          <div class="card-text">
+              hello icsd card 
+              <form [formGroup]="frmGrp"  (ngSubmit)="frmSub()">
+                <div class="form-group">
+                  <p class="alert alert-success">Enter Empno</p>
+                  <input type="text" placeholder="Emp no" class="form-control" formControlName="empno"/>
+                  
+                </div>
+                <div class="form-group">
+                  <p class="alert alert-success">Enter Ename</p>
+                  <input type="text" placeholder="Ename" class="form-control" formControlName="ename"/>
+                </div>
+                <div class="form-group">
+                  <p class="alert alert-success">Enter Eage</p>
+                  <input type="text" placeholder="Eage" class="form-control" formControlName="eage"/>
+                </div>
+                <div class="form-group">
+                  <p class="alert alert-success">Enter Eadd</p>
+                  <input type="text" placeholder="Eaddress" class="form-control" formControlName="eadd"/>
+                </div>
+                <div class="form-group">
+                  <p class="alert alert-success">Enter Esal</p>
+                  <input type="text" placeholder="Esalary" class="form-control" formControlName="esal"/>
+                </div>
+    
+    
+                <div class="form-group">
+                  <input type="submit" value="Submit" class="btn btn-warning"/>
+                </div>
+              </form>
+          </div>
+         
+          
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -19,8 +19,8 @@ export class C30EmpInsertDelUpdateSelectComponent implements OnInit {
     //this.emp.controls.empno.value=this.empno;
     this.getEmpByEmpno();
     
-  }
-
+  }    
+  
   empRec:any;
   getEmpByEmpno()
   {
@@ -35,7 +35,7 @@ export class C30EmpInsertDelUpdateSelectComponent implements OnInit {
   }
   ngOnInit() {
   }
-
+ 
   btnClicked:string;
   emp = new FormGroup({
     empno: new FormControl('', [Validators.required]),
@@ -63,7 +63,7 @@ export class C30EmpInsertDelUpdateSelectComponent implements OnInit {
     }
     // else if(this.btnClicked=='update')
     // {
-    //   console.log('update clicked');
+    //   console.log('update clicked'); 
     // }
     else  if(this.btnClicked=='reg' || this.btnClicked=='update')
     {

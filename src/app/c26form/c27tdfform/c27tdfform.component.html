@@ -1,8 +1,7 @@
 <p>
   c27tdfform works!
 </p>
-
-<h1 class="text-center">Template Driven Form</h1>
+<h1 class="text-center">Template Driven Form</h1> 
 
 <form #userForm="ngForm" (ngSubmit)="add(userForm.value)">
   <div class="form-group">
@@ -35,7 +34,11 @@
     <label>Enter Country</label>
     <input type="text" class="form-control" ngModel name="txtCountry"/>
   </div>
-</div>
+  <div class="form-group">
+    <label>Enter house no</label>
+    <input type="text" class="form-control" ngModel name="txtHno"/>
+  </div>
+</div>   
 
   <div class="form-group">
     <input type="submit" value="Register" class="btn btn-primary"/>
@@ -46,4 +49,10 @@
     <button class="btn btn-success float-right">new portal</button>
   </div>
 
-</form>
+</form>  
+
+city you entered is {{city}}
+<pre>
+
+{{formData|json}}
+</pre>

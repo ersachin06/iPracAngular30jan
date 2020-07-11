@@ -11,6 +11,7 @@ import { validateConfig } from '@angular/router/src/config';
 export class C28reactiveformComponent implements OnInit {
 
   rForm:FormGroup;
+  
   constructor(private fb:FormBuilder)
    {
 
@@ -18,7 +19,7 @@ export class C28reactiveformComponent implements OnInit {
 
   ngOnInit()
   {
-      this.rForm=this.fb.group(
+      this.rForm=this.fb.group(  
         {
           "name" : [null,Validators.required],
           "descriptions" : [null,Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(10)])]
@@ -29,6 +30,7 @@ export class C28reactiveformComponent implements OnInit {
 
   addPost( data)
   {
+    alert("data is "+data);
     console.log(data);
   }
 

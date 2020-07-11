@@ -1,0 +1,48 @@
+<p>
+  c37-reactive-formsqtyinstock works!
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/b1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Reactive Forms</h5>
+          <div class="card-text">
+              hello icsd card 
+              <form [formGroup]="frmGrp"  (ngSubmit)="frmSub()">
+                <div class="form-group">
+                  <p class="alert alert-success">Enter Proudct id </p>
+                  <input type="text" placeholder="Emp no" class="form-control" formControlName="prodid"/>
+                  <p *ngIf="!frmGrp.controls.prodid.valid">1 Enter prodid </p>
+                  <p *ngIf="frmGrp.controls.prodid.errors?.required">2 please Enter prodid,it is required </p>
+                </div>
+                <div class="form-group">
+                  <p class="alert alert-success">Enter proudct name</p>
+                  <input type="text" placeholder="prodname" class="form-control" formControlName="prodname"/>
+                  
+                  <p *ngIf="!frmGrp.controls.prodname.valid"> Enter prod name  </p>
+                </div> 
+                <div class="form-group">
+                  <p class="alert alert-success">Enter prod qty </p>
+                  <input type="text" placeholder="prodqty" class="form-control" formControlName="prodqty"/>
+                  <p *ngIf="frmGrp.controls.prodqty.errors">  qty not available </p>
+                </div>
+                
+    
+                <div class="form-group">
+                  <!-- <input type="submit" [disabled]="!frmGrp.valid"   value="Submit"  class="btn btn-warning"/> -->
+                  <input type="submit"  value="Submit" class="btn btn-warning"/>
+                </div>
+              </form>
+          </div>
+         
+          
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

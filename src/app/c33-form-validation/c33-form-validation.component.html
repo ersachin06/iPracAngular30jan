@@ -1,0 +1,110 @@
+<p>
+  c33-form-validation works!
+</p>
+
+<!--
+as soon as Angular compiler detect <form> tag it create object of ngForm and same object
+  we get in localreference as 
+<form class="card" #myFrm="ngForm" (ngSubmit)="mySub(myFrm)">
+
+
+  what ngForm do :
+  * Creates a top-level `FormGroup` instance and binds it to a form
+ * to track aggregate form value and validation status.
+ *
+ * As soon as you import the `FormsModule`, this directive becomes active by default on
+ * all `<form>` tags.  You don't need to add a special selector.
+ *
+ * You can export the directive into a local template variable using `ngForm` as the key
+ * (ex: `#myForm="ngForm"`). This is optional, but useful.  Many properties from the underlying
+ * `FormGroup` instance are duplicated on the directive itself, so a reference to it
+ * will give you access to the aggregate value and validity status of the form, as well as
+ * user interaction properties like `dirty` and `touched`.
+
+ To register child controls with the form, you'll want to use `NgModel` with a
+ * `name` attribute.  You can also use `NgModelGroup` if you'd like to create
+ * sub-groups within the form.
+
+ You can listen to the directive's `ngSubmit` event to be notified when the user has
+ * triggered a form submission. The `ngSubmit` event will be emitted with the original form
+ * submission event.
+-->
+
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <form #myFrm="ngForm" (ngSubmit)="frmSub(myFrm)">
+
+      <div class="formGroup">
+        empno: <input type="number" class="form-control" name="empno" #empno="ngModel"  ngModel  placeholder="Empno" required/>
+        <p class="alert alert-danger" *ngIf="!empno.valid">Enter Empno</p>
+      </div>
+
+      <div class="formGroup">
+        ename <input type="text"  placeholder="Ename" class="form-control" name="ename" #ename="ngModel"    ngModel   required/>
+         <p *ngIf="!ename.valid" class="alert alert-danger">1Please enter name  , name is required</p>
+         <p *ngIf="!ename.valid" class="alert alert-success">2enter name is neeceessary2</p>
+        <p *ngIf="ename.errors?.required" class="alert alert-info">3 ener name isimp3 </p> 
+        <div *ngIf="!ename.valid" class="alert alert-info">
+        <p >Enter Ename</p>
+      </div>
+    <!-- <strong>{{ename.className}} work only if i write #ename only instead of #ename="ngModel"</strong><br> -->
+    
+    <strong>{{ename.value}}</strong>
+      </div>
+      <div class="formGroup">
+        eage: <input type="text"  placeholder="Eage" name="eage" ngModel #ea="ngModel" required class="form-control"/>
+        <p class="alert alert-danger" *ngIf="!ea.valid">Enter Eage</p>
+      </div>
+      <div class="formGroup">
+      
+        email: <input type="email"   placeholder="email" name="eemail" [pattern]="emlPatern" #eemail="ngModel"  ngModel required  class="form-control"/>
+         <p class="alert alert-danger" *ngIf="eemail.errors?.required">Please enter  email </p> 
+         <p class="alert alert-info" *ngIf="eemail.errors?.pattern">Please enter valid  email </p>
+         
+      </div>
+      <div class="formGroup">
+        esal: <input type="number"  placeholder="esal" name="esal" ngModel    #es="ngModel" required class="form-control"/>
+        <p class="alert alert-danger" *ngIf="!es.valid">Enter sal</p>
+      </div>
+    
+      <div ngModelGroup="address">
+        <div class="formGroup">
+          ecity: <input type="text"  placeholder="Ecity" name="ecity" ngModel  #ecity="ngModel" required class="form-control"/>
+          <p class="alert alert-danger" *ngIf="!ecity.valid"   >Enter city</p>
+        </div>
+        <div class="formGroup">
+          ehno: <input type="text"  placeholder="Ehono" name="ehno" ngModel #ehno="ngModel"  minlength="5" class="form-control"/>
+          <p class="alert alert-danger" *ngIf="!ehno.valid">Enter houseno min 3 digits </p>
+          ehno: <strong>{{ehno.value | json}}</strong><br>
+          valid: <strong>{{ehno.valid}}</strong><br>          
+          errors: <strong>{{ehno.errors | json}}</strong><br>
+          minlength: <strong>{{ehno.errors?.minlength | json}}</strong><br>
+          actual length :<strong>{{ehno.errors?.minlength?.actualLength}}</strong><br>
+          dirty: <strong>{{ehno.dirty}}</strong><br>
+          disabled: <strong>{{ehno.disabled}}</strong><br>
+        </div>
+    
+      </div>
+    
+    
+    
+      <div class="formGroup">
+        <!-- <input type="submit" [disabled]="!myFrm.valid"  value="emp reg "> -->
+        <input type="submit"  value="emp reg " class="btn btn-primary form-control">
+      </div>
+    
+    </form>
+  </div>
+</div>
+
+</div>
+
+
+
+{{frmData}}
+
+{{frmData | json}}
+<pre>
+{{frmData | json}}
+</pre>

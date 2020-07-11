@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './c27tdfformvalidation.component.html',
   // styleUrls: ['./c27tdfformvalidation.component.css']
   styles:[
-    '     input.ng-invalid{border-left:5px solid red;}   input.ng-valid{border-left:5px solid green;}  '
+'input.ng-invalid{border-left:15px solid red;} input.ng-valid{border-left:15px solid green;}'
         ]
 })
 export class C27tdfformvalidationComponent implements OnInit {
 
   constructor() { }
-  city :string;
+  city :string; 
   ngOnInit() {
   }
   add(data)

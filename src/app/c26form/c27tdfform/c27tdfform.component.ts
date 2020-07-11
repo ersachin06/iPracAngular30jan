@@ -8,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class C27tdfformComponent implements OnInit {
 
   constructor() { }
-
+ 
+  formData:any;
   city :string;
   ngOnInit() {
   }
   add(data)
   {
+    this.formData=data;
     console.log(data);
-    alert(data);
+    alert(data); 
     alert(data["txtname"]);
+    alert(data["txtHno"]);
     this.city=data["txtCity"];
     alert("city = "+ this.city);
   }

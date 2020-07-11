@@ -3,13 +3,14 @@
 </p>
 <h1 class="text-center">Emp Reg Form</h1>
 <div class="container">
-  <div class="row">
+  <div class="row">  
     <div class="col-md-12">
         <!-- <form #userForm="ngForm"  (ngSubmit)="add(userForm.value)"> -->
         <form  #empForm="ngForm" [formGroup]="emp" (ngSubmit)="empFormOnSubmit()">
             <div class="form-group">
                 <label>Enter Empno</label>
-                <input type="number" class="form-control"  #nameRef required  value="{{empRec?.empno}}" formControlName="empno"/>
+                <input type="number" class="form-control"  
+                #nameRef required  value="{{empRec?.empno}}" formControlName="empno"/>
                 <strong>{{nameRef.className}}</strong>
             </div>
           
@@ -18,7 +19,7 @@
               <input type="text" class="form-control"  #nameRef2 required value="{{empRec?.ename}}"  formControlName="ename"/>
               <strong>{{nameRef2.className}}</strong>
             </div>
-          
+              
           
             <div class="form-group">
               <label>Enter Eage</label>
@@ -49,14 +50,9 @@
               <a class="nav-link" [routerLink]="['/empSelect']"  >Emp Select</a>
               <!-- <button class="btn btn-success float-right">portal</button> -->
             </div>
-          
-          
-          </form>
-          
+          </form>          
     </div>
-
   </div>
-
 </div>
 <pre> {{empRec|json}}</pre>
 <!-- <router-outlet></router-outlet> -->

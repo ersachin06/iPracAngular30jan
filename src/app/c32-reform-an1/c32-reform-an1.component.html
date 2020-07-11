@@ -1,0 +1,82 @@
+<p>
+  c32-reform-an1 works!
+</p>
+
+<!--
+as soon as Angular compiler detect <form> tag it create object of ngForm and same object
+  we get in localreference as 
+<form class="card" #myFrm="ngForm" (ngSubmit)="mySub(myFrm)">
+
+
+  what ngForm do :
+  * Creates a top-level `FormGroup` instance and binds it to a form
+ * to track aggregate form value and validation status.
+ *
+ * As soon as you import the `FormsModule`, this directive becomes active by default on
+ * all `<form>` tags.  You don't need to add a special selector.
+ *
+ * You can export the directive into a local template variable using `ngForm` as the key
+ * (ex: `#myForm="ngForm"`). This is optional, but useful.  Many properties from the underlying
+ * `FormGroup` instance are duplicated on the directive itself, so a reference to it
+ * will give you access to the aggregate value and validity status of the form, as well as
+ * user interaction properties like `dirty` and `touched`.
+
+ To register child controls with the form, you'll want to use `NgModel` with a
+ * `name` attribute.  You can also use `NgModelGroup` if you'd like to create
+ * sub-groups within the form.
+
+ You can listen to the directive's `ngSubmit` event to be notified when the user has
+ * triggered a form submission. The `ngSubmit` event will be emitted with the original form
+ * submission event.
+-->
+
+
+
+<form #myFrm="ngForm" (ngSubmit)="frmSub(myFrm)">
+  <div class="formGroup">
+    empno: <input type="number" name="empno" ngModel  placeholder="Empno" />
+    <p>Enter Empno</p>
+  </div>
+  <div class="formGroup">
+    ename <input type="text"  placeholder="Ename" name="ename" ngModel />
+    <p>Enter Ename</p>
+  </div>
+  <div class="formGroup">
+    eage: <input type="text"  placeholder="Eage" name="eage" ngModel />
+    <p>Enter Eage</p>
+  </div>
+  <div class="formGroup">
+    email: <input type="email"  placeholder="email" name="eemail" ngModel />
+    <p>Enter Email</p>
+  </div>
+  <div class="formGroup">
+    esal: <input type="number"  placeholder="esal" name="esal" ngModel/>
+    <p>Enter sal</p>
+  </div>
+
+  <div ngModelGroup="address">
+    <div class="formGroup">
+      eage: <input type="text"  placeholder="Ecity" name="ecity" ngModel />
+      <p>Enter city</p>
+    </div>
+    <div class="formGroup">
+      eage: <input type="text"  placeholder="Ehono" name="ehno" ngModel />
+      <p>Enter houseno</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="formGroup">
+    <input type="submit" value="emp reg ">
+  </div>
+
+</form>
+
+{{frmData}}
+
+{{frmData | json}}
+<pre>
+{{frmData | json}}
+</pre>

@@ -1,4 +1,75 @@
-<app-demo-tushar-observable></app-demo-tushar-observable>
+<!-- *********************************************************************************************** 
+  we can register service at 2 places- 
+  At Component level and At module level
+  if we not register than we will get Static Injector error
+
+  * if we register service at component level then:
+and we call component using service 3 times in app.component.html than
+every component will have its own variable - here - categories and products - 
+[c[s]]  , [c[s]] , [c[s]] 
+i.e for 3 componnet , 3 diff service instances will be created.
+
+* if we register service at module level  then :
+Only one instance for 3 components will be created at module level 
+[c/c/c[s]]
+all 3 component will share one single instance of service.
+here also - 3 components sharing data by means of service.
+ex=- step by step form - all component will share data to service , service can have user object
+havind 100 fields.
+
+
+  ***** Module level registaration : 
+  example :
+@Injectable({
+  providedIn: 'root'
+})
+export class Data1Service {
+
+
+ ***** Component level registeration : 
+  example: 
+@Component({
+  selector: 'app-c42componnetlevelservice',
+  templateUrl: './c42componnetlevelservice.component.html',
+  styleUrls: ['./c42componnetlevelservice.component.css'],
+  providers:[Data2componentlevelService]//COMPONNET LEVEL SERVICE REGISTARTION IS DONE HERE
+})
+
+
+
+-->
+
+
+
+
+<!-- Component level service registration prog  -->
+
+<app-c42componnetlevelservice></app-c42componnetlevelservice>
+<app-c42componnetlevelservice></app-c42componnetlevelservice>
+<app-c42componnetlevelservice></app-c42componnetlevelservice>
+
+
+
+
+<!-- 
+  moudle level reg of service - 
+  if we change categoari in one coponent - value of categories will be changes at all  3 places at same time. -->
+
+<!-- 
+<app-c40consumeservice></app-c40consumeservice>
+<app-c40consumeservice></app-c40consumeservice>
+<app-c40consumeservice></app-c40consumeservice> -->
+
+<!-- *********************************************************************************************** -->
+
+
+
+
+
+
+
+<!-- <app-c39-observable-slides></app-c39-observable-slides> -->
+ <!-- <app-demo-tushar-observable></app-demo-tushar-observable>  -->
 <!-- <app-c38-using-objservable></app-c38-using-objservable> -->
 <!-- <app-c37-reactive-formsqtyinstock></app-c37-reactive-formsqtyinstock> -->
 <!-- <app-c36-reactiveforms-validations></app-c36-reactiveforms-validations> -->
@@ -9,7 +80,7 @@
 <!-- <app-c32-reform-an1></app-c32-reform-an1> -->
 <!-- <app-c25optimize-twoway></app-c25optimize-twoway>  -->
 
-
+<!-- <app-d39interval></app-d39interval> -->
 
 
 

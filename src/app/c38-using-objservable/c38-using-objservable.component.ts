@@ -1,25 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IcsdServiceService } from '../icsd-service.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-c38-using-objservable',
   templateUrl: './c38-using-objservable.component.html',
   styleUrls: ['./c38-using-objservable.component.css']
 })
-export class C38UsingObjservableComponent implements OnInit {
+export class C38UsingObjservableComponent implements OnInit,OnDestroy 
+{
+  mySub:Subscription;
 
   constructor(private service:IcsdServiceService) 
   {
 
 
    }
+  ngOnDestroy(): void {
+      this.mySub.unsubscribe();
+  }
 
   ngOnInit() 
   {
     
     
-    this.service.obsIcsd().subscribe(
+    this.mySub=this.service.obsIcsd().subscribe(
       iter=>{
          
             console.log(iter+" sachin ")    

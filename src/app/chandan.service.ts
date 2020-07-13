@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, interval } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,12 @@ complete() - successfully completed
 
 */
   constructor() { }
+
+  obsSlide1()
+  {
+    //creates an observalbe that emits sequntial numbers every specified interval of time.
+    return interval(2000);
+  }
 
   chandanObs():Observable<number>
   {
@@ -34,3 +40,24 @@ complete() - successfully completed
 
 
 }
+
+export interface intSlide1
+{
+  prodName:string;
+  imgName:string;
+}
+
+/*
+when does observable start emitting - this timeing matters
+
+hot observable - start emitting items as soon as it is created so any observer who later subscribes to that 
+observable may start observing the sequence somewhere in middle.
+
+ex- youtube live 
+
+cold observable - wait untill the observer subscribes to it before it begin to emit items , and so 
+a  objserver is garanteed to see the whole sequence from the begining .
+ex youtube upload vide you watch
+
+untill the subscriber subscribe - cold observerable does not begin to emit items.
+*/

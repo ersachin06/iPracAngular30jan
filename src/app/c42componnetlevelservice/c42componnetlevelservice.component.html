@@ -1,0 +1,21 @@
+<p>
+  c42componnetlevelservice works!
+</p>
+<table class="table table-bordered">
+  <tr class="bg-primary">
+    <td>catid</td>
+    <td>catname</td>
+    <td>catimage</td>
+    <td>catdesc</td>
+
+  </tr>
+  <ng-container *ngFor="let c of categories">
+    <tr >
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.img}}</td>
+      <td>{{c.desc}}</td>
+    </tr>
+  </ng-container>
+</table>
+<button (click)="addRow()">Add Row </button>

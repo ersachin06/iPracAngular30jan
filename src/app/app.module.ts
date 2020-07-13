@@ -45,6 +45,11 @@ import { C37ReactiveFormsqtyinstockComponent } from './c37-reactive-formsqtyinst
 import { C38spinnerComponent } from './c38spinner/c38spinner.component';
 import { C38UsingObjservableComponent } from './c38-using-objservable/c38-using-objservable.component';
 import { DemoTusharObservableComponent } from './demo-tushar-observable/demo-tushar-observable.component';
+import { D39intervalComponent } from './d39interval/d39interval.component';
+import { C40consumeserviceComponent } from './c40consumeservice/c40consumeservice.component';
+import { C41consueservice2Component } from './c41consueservice2/c41consueservice2.component';
+import { C42componnetlevelserviceComponent } from './c42componnetlevelservice/c42componnetlevelservice.component';
+// import { C39ObservableSlidesComponent } from './c39-observable-slides/c39-observable-slides.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,6 +84,11 @@ import { DemoTusharObservableComponent } from './demo-tushar-observable/demo-tus
     C38spinnerComponent,
     C38UsingObjservableComponent,
     DemoTusharObservableComponent,
+    D39intervalComponent,
+    C40consumeserviceComponent,
+    C41consueservice2Component,
+    C42componnetlevelserviceComponent,
+    // C39ObservableSlidesComponent,
     
    
   ],

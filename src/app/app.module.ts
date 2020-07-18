@@ -54,6 +54,11 @@ import { C40consumeserviceComponent } from './c40consumeservice/c40consumeservic
 import { C41consueservice2Component } from './c41consueservice2/c41consueservice2.component';
 import { C42componnetlevelserviceComponent } from './c42componnetlevelservice/c42componnetlevelservice.component';
  import { C39ObservableSlidesComponent } from './c39-observable-slides/c39-observable-slides.component';
+import { C43stepbystepFormComponent } from './c43stepbystepForm/c43stepbystep-form/c43stepbystep-form.component';
+import { Step1Component } from './c43stepbystepForm/step1/step1.component';
+import { Step2Component } from './c43stepbystepForm/step2/step2.component';
+import { Step3Component } from './c43stepbystepForm/step3/step3.component';
+import { Step4Component } from './c43stepbystepForm/step4/step4.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,6 +98,11 @@ import { C42componnetlevelserviceComponent } from './c42componnetlevelservice/c4
     C41consueservice2Component,
     C42componnetlevelserviceComponent,
     C39ObservableSlidesComponent,
+    C43stepbystepFormComponent,
+    Step1Component,
+    Step2Component,
+    Step3Component,
+    Step4Component,
     
    
   ],
@@ -113,6 +123,10 @@ import { C42componnetlevelserviceComponent } from './c42componnetlevelservice/c4
     //  HttpModule,
     RouterModule.forRoot(
       [
+        {path:'step1',component:Step1Component},
+        {path:'step2',component:Step2Component},
+        {path:'step3',component:Step3Component},
+        {path:'step4',component:Step4Component},
          {path:'home',component:HomeComponent}, 
          {path:'users',component:UsersComponent},
          {path:'products',component:ProductComponent},

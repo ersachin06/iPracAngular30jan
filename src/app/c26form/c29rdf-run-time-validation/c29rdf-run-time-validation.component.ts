@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
-import { validateConfig } from '@angular/router/src/config';
+// import { validateConfig } from '@angular/router/src/config';
 
 @Component({
   selector: 'app-c29rdf-run-time-validation',

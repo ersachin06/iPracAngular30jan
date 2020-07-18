@@ -27,12 +27,16 @@ import { C27tdfformvalidationComponent } from './c27tdfformvalidation/c27tdfform
 import { C28reactiveformComponent } from './c26form/c28reactiveform/c28reactiveform.component';
 import { C29rdfRunTimeValidationComponent } from './c26form/c29rdf-run-time-validation/c29rdf-run-time-validation.component';
 
-import { HttpModule } from '@angular/http';
+//  import { HttpClientModule } from '@angular/http';
 
 import { HttpClientModule } from '@angular/common/http'; 
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatIconModule} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { C30EmpInsertDelUpdateSelectComponent } from './c30-emp-insert-del-update-select/c30-emp-insert-del-update-select.component';
 import { C31empDispComponent } from './c31emp-disp/c31emp-disp.component';
@@ -49,7 +53,7 @@ import { D39intervalComponent } from './d39interval/d39interval.component';
 import { C40consumeserviceComponent } from './c40consumeservice/c40consumeservice.component';
 import { C41consueservice2Component } from './c41consueservice2/c41consueservice2.component';
 import { C42componnetlevelserviceComponent } from './c42componnetlevelservice/c42componnetlevelservice.component';
-// import { C39ObservableSlidesComponent } from './c39-observable-slides/c39-observable-slides.component';
+ import { C39ObservableSlidesComponent } from './c39-observable-slides/c39-observable-slides.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +92,7 @@ import { C42componnetlevelserviceComponent } from './c42componnetlevelservice/c4
     C40consumeserviceComponent,
     C41consueservice2Component,
     C42componnetlevelserviceComponent,
-    // C39ObservableSlidesComponent,
+    C39ObservableSlidesComponent,
     
    
   ],
@@ -102,11 +106,11 @@ import { C42componnetlevelserviceComponent } from './c42componnetlevelservice/c4
      MatCheckboxModule,
      MatIconModule,
 
-     MatFormFieldModule,
+    //  MatFormFieldModule,
      MatInputModule,
      MatSelectModule, 
      HttpClientModule,
-     HttpModule,
+    //  HttpModule,
     RouterModule.forRoot(
       [
          {path:'home',component:HomeComponent}, 

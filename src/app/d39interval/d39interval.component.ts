@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class D39intervalComponent implements OnInit {
 
-  x=Subscription;
+  x:Subscription;
   slide:intSlide1;
   slides:Array<intSlide1>=new Array();
   constructor(private service:ChandanService)
@@ -25,7 +25,7 @@ export class D39intervalComponent implements OnInit {
   ngOnInit() 
   {
     let cntr=1;
-      this.service.obsSlide1().subscribe(
+     this.x= this.service.obsSlide1().subscribe(
       it=>{
         this.slide=this.slides[cntr];
         cntr++;
@@ -36,7 +36,9 @@ export class D39intervalComponent implements OnInit {
         }
       }
 
-     )    
+     )
+     
+     //this.x.unsubscribe();
   }
 
 }

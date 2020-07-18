@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class C25optimizeTwowayComponent implements OnInit {
 
+  unm:string;
+  lnm:string;
   constructor() { }
 
   ngOnInit() {

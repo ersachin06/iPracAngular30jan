@@ -18,17 +18,24 @@
                   <p *ngIf="!frmGrp.controls.empno.valid">1 Enter Empno </p>
                   <p *ngIf="frmGrp.controls.empno.errors?.required">2 please Enter Empno,it is required </p>
                 </div>
+
+
+
                 <div class="form-group">
                   <p class="alert alert-success">Enter Ename</p>
                   <input type="text" placeholder="Ename" class="form-control" formControlName="ename"/>
                   
                   <p *ngIf="frmGrp.controls.ename.errors"> Enter alphanumeric name only </p>
                 </div>
+
+
                 <div class="form-group">
                   <p class="alert alert-success">Enter Eage</p>
                   <input type="text" placeholder="Eage" class="form-control" formControlName="eage"/>
                   <p *ngIf="!frmGrp.controls.eage.valid"> Enter eage </p>
                 </div>
+
+
                 <div class="form-group">
                   <p class="alert alert-success">Enter Eadd</p>
                   <input type="text" placeholder="Eaddress" class="form-control" formControlName="eadd"/>

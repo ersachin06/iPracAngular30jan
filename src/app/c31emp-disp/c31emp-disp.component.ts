@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 
-import { AppService } from "../app.service";
+import { AppService } from "../app.service"; 
 @Component({
   selector: 'app-c31emp-disp',
   templateUrl: './c31emp-disp.component.html',

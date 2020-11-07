@@ -21,7 +21,7 @@ import { Injectable } from '@angular/core';
 // <app-c40consumeservice></app-c40consumeservice>
 // <app-c40consumeservice></app-c40consumeservice>
 
-// ik componnet mai change so toh sab mai change
+// ik componnet mai change so toh sab mai change 
 //**********************************************
 
 @Injectable({

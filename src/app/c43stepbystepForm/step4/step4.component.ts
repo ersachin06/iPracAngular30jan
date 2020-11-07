@@ -46,6 +46,7 @@ export class Step4Component implements OnInit {
     this.service.objUser['emailid']=emailid;
     this.service.objUser['deptno']=deptno;
     this.service.dispObjUser();
+    this.service.saveUserReg(this.service.objUser);
     console.log("inside register");
     
   }

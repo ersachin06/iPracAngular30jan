@@ -9,7 +9,7 @@ import {Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./c30-emp-insert-del-update-select.component.css']
 })
 export class C30EmpInsertDelUpdateSelectComponent implements OnInit {
-
+ 
   empno:string;
   constructor(private activateRoute:ActivatedRoute,private appService : AppService,private router:Router)
    {
@@ -73,7 +73,8 @@ export class C30EmpInsertDelUpdateSelectComponent implements OnInit {
       let eadd = this.emp.controls.eadd.value;
       let esal = this.emp.controls.esal.value;
       console.log(empno+" "+ ename+" "+ eage + "  "+eadd +  " "+ esal);
-      //alert("form submited "+ this.emp.value);
+      alert("form submited "+ this.emp.value);
+      console.log(this.emp.value);
       this.appService.saveEmp(this.emp.value).subscribe(data=>{
         this.showSuccess("Emp Successfully added","Success");
       

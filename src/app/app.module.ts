@@ -59,6 +59,7 @@ import { Step1Component } from './c43stepbystepForm/step1/step1.component';
 import { Step2Component } from './c43stepbystepForm/step2/step2.component';
 import { Step3Component } from './c43stepbystepForm/step3/step3.component';
 import { Step4Component } from './c43stepbystepForm/step4/step4.component';
+import { C44RegProComponent } from './c44-reg-pro/c44-reg-pro.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,6 +104,7 @@ import { Step4Component } from './c43stepbystepForm/step4/step4.component';
     Step2Component,
     Step3Component,
     Step4Component,
+    C44RegProComponent,
     
    
   ],

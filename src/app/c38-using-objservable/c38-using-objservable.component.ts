@@ -10,7 +10,7 @@ import { Observable, Subscription } from 'rxjs';
 export class C38UsingObjservableComponent implements OnInit,OnDestroy 
 {
   mySub:Subscription;
-
+  x:number=0;
   constructor(private service:IcsdServiceService) 
   {
 
@@ -28,12 +28,13 @@ export class C38UsingObjservableComponent implements OnInit,OnDestroy
       iter=>{
          
             console.log(iter+" sachin ")    
-         
+          this.x=iter;
 
         },
       err=> console.log(err),
       ()=> console.log("successfully completed")
     )
   }
+
 
 }

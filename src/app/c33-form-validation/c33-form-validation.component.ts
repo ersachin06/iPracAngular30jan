@@ -29,6 +29,6 @@ export class C33FormValidationComponent implements OnInit {
        console.log(fval["ename"]);
        console.log(fval["address"]);
 //console.log(frm["address"]["ecity"]);
-      //console.log( JSON.stringify(this.frmData));
+      console.log( JSON.stringify(this.frmData));
   }
 }

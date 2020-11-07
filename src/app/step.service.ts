@@ -9,9 +9,9 @@ export class StepService {
   constructor() { 
     this.objUser=new UserReg();
   }
-  getObjUser()
+  getObjUser():UserReg
   {
-    return this.getObjUser();
+    return this.objUser;
   }
   setObjUser(objUser:UserReg)
   {
@@ -20,6 +20,11 @@ export class StepService {
   dispObjUser()
   {
     console.log(this.objUser);
+  }
+  saveUserReg(obj:UserReg)
+  {
+    obj.showUser();
+    //code to save data inside database ---
   }
 }
 
@@ -34,4 +39,8 @@ export class UserReg
   emailid:string;
   deptno:string;
 
+  showUser()
+  {
+    console.log(this.fnm+" "+ this.lnm+ " "+ this.age+ " "+ this.gender+" "+ this.pincode+" "+this.mobileNo+" "+ this.emailid+" "+ this.deptno);
+  }
 }

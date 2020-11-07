@@ -11,6 +11,9 @@
           <h5 class="card-title">Reactive Forms</h5>
           <div class="card-text">
               hello icsd card 
+
+
+
               <form [formGroup]="frmGrp"  (ngSubmit)="frmSub()">
                 <div class="form-group">
                   <p class="alert alert-success">Enter Proudct id </p>
@@ -18,12 +21,19 @@
                   <p *ngIf="!frmGrp.controls.prodid.valid">1 Enter prodid </p>
                   <p *ngIf="frmGrp.controls.prodid.errors?.required">2 please Enter prodid,it is required </p>
                 </div>
+
+
+
+
                 <div class="form-group">
                   <p class="alert alert-success">Enter proudct name</p>
                   <input type="text" placeholder="prodname" class="form-control" formControlName="prodname"/>
                   
                   <p *ngIf="!frmGrp.controls.prodname.valid"> Enter prod name  </p>
                 </div> 
+
+
+                
                 <div class="form-group">
                   <p class="alert alert-success">Enter prod qty </p>
                   <input type="text" placeholder="prodqty" class="form-control" formControlName="prodqty"/>

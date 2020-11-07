@@ -76,7 +76,7 @@ as soon as Angular compiler detect <form> tag it create object of ngForm and sam
         <div class="formGroup">
           ehno: <input type="text"  placeholder="Ehono" name="ehno" ngModel #ehno="ngModel"  minlength="5" class="form-control"/>
           <p class="alert alert-danger" *ngIf="!ehno.valid">Enter houseno min 3 digits </p>
-          ehno: <strong>{{ehno.value | json}}</strong><br>
+          ehno: <strong>{{ehno.value }}</strong><br>
           valid: <strong>{{ehno.valid}}</strong><br>          
           errors: <strong>{{ehno.errors | json}}</strong><br>
           minlength: <strong>{{ehno.errors?.minlength | json}}</strong><br>

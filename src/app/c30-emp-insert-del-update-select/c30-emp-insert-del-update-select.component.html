@@ -1,6 +1,17 @@
 <p>
   c30-emp-insert-del-update-select works!
 </p>
+<!-- @Id
+@Column(name="empno")
+public int empno;
+
+public String ename;
+
+public int eage;
+
+public String eadd;
+
+public int esal; -->
 <h1 class="text-center">Emp Reg Form</h1>
 <div class="container">
   <div class="row">  
@@ -18,7 +29,7 @@
               <label>Enter Ename</label>
               <input type="text" class="form-control"  #nameRef2 required value="{{empRec?.ename}}"  formControlName="ename"/>
               <strong>{{nameRef2.className}}</strong>
-            </div>
+            </div> 
               
           
             <div class="form-group">

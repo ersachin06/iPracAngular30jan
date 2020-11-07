@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class AppService {
 
   // BaseUrl='http://localhost:8902/aclassdeal/api';
-BaseUrl='http://localhost:8909';
+BaseUrl='http://localhost:8910';
        //http://localhost:8901
    
 errorHandler(error){
@@ -48,10 +48,13 @@ errorHandler(error){
     }
   constructor(private httpClient:HttpClient) { }
 
+  //form data - complete json - of emp form 
+  //{empno: 7845, ename: "anurag", eage: "22", eadd: "goa", esal: "98777"}
   saveEmp(formData) {
     console.log('saveEmp'+formData);
     let url=this.BaseUrl+'/saveEmpTbl';
-       return this.httpClient.post(url,formData).pipe(map(this.successResponse), catchError(this.errorHandler)); 
+    //return this.httpClient.post(url,{unm:'icsd',id:1,rollno:100}).pipe(map(this.successResponse), catchError(this.errorHandler)); 
+      return this.httpClient.post(url,formData).pipe(map(this.successResponse), catchError(this.errorHandler)); 
   }
   // 
   // RxJS catchError operator catches the error thrown by Observable and 
@@ -67,6 +70,7 @@ errorHandler(error){
   {
     //let url = this.BaseUrl+'/getAllEmps?limit='+limit+'&offset='+offset;
     let url = this.BaseUrl+'/getAllEmps';
+    console.log("url is " +url);
     return this.httpClient.get(url).pipe(map(this.icsdSuccessResponse),catchError(this.errorHandler));
   }
   getEmpByEmpno(empno)

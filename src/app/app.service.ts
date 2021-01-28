@@ -73,6 +73,8 @@ errorHandler(error){
     console.log("url is " +url);
     return this.httpClient.get(url).pipe(map(this.icsdSuccessResponse),catchError(this.errorHandler));
   }
+ 
+
   getEmpByEmpno(empno)
   {
     let url = this.BaseUrl+'/getEmpByEmpno?empno='+empno;

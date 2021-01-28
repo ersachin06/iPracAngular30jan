@@ -1,0 +1,14 @@
+<p>c45-find-index works!</p>
+<pre>{{products| json}}</pre><br>
+{{res}}<br>
+<input type="text" [(ngModel)]="prodName"/><br>
+{{prodName}}<br>
+<button (click)="funFindIndexByProductName()">get index of prod name entered </button><br>
+<button (click)="arrIndexOf()">find index of item in array 5 10 15 20 25- find index of 15  </button><br>
+<button (click)="funMapGetAllProductname()">MAP FUNCTION-Using Map function - get all prod name </button><br>
+<button (click)="funFilterGetAllProductHavingPriceGT20000()">Filter FUNCTION -Getting all products having price > 20000</button><br>
+<button (click)="funSumOfAllProds()">Reduce FUNCTION -sumof  price of all products</button><br>
+<button (click)="funForLoopDispAllProducts()">For Loop - Traverse product list</button><br>
+<button (click)="funForOf_disp_values()">For Loop - disp values product list</button><br>
+<button (click)="funForIn_disp_Keys()">For Loop - disp keys product list</button><br>
+<button (click)="funForEachLoop()">For Each loop on Products</button>
